@@ -4,11 +4,23 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        int[] nums = {4, 1, 7, -2, 0};
+
+        ArrayStats stats = new ArrayStats();
+
+        System.out.println("Using For Loop:");
+        System.out.println("Minimum: " + stats.minimumUsingForLoop(nums));
+        System.out.println("Maximum: " + stats.maximumUsingForLoop(nums));
+        System.out.println("Sum: " + stats.sumUsingForLoop(nums));
+        System.out.println("Average: " + stats.averageUsingForLoop(nums));
+
+        System.out.println();
+
+        System.out.println("Using Stream:");
+        System.out.println("Minimum: " + stats.minimumUsingStream(nums));
+        System.out.println("Maximum: " + stats.maximumUsingStream(nums));
+        System.out.println("Sum: " + stats.sumUsingStream(nums));
+        System.out.println("Average: " + stats.averageUsingStream(nums));
     }
 }
